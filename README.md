@@ -1,6 +1,6 @@
 # vue-tabbar
 
-> A Vue.js project
+> 开发一个导航栏组件
 
 ## Build Setup
 
