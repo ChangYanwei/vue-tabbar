@@ -25,6 +25,7 @@ npm run build
 4. 配合路由使用的步骤
    1. 自己先定义好路由和组件的映射关系
    2. 在使用TabBarItem的地方传入 `path` 参数
+5. 又定义了一个MainTabBar组件做进步封装，用于简化在App.vue文件中的代码。在App.vue 中使用MainTabBar，在MainTabBar中使用TabBar和TabBarItem
 
 
 
