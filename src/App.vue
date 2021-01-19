@@ -40,5 +40,9 @@
 </script>
 
 <style>
-  @import "assets/css/base.css";
+  /*@import "assets/css/base.css";*/
+  body {
+    padding: 0;
+    margin: 0;
+  }
 </style>
