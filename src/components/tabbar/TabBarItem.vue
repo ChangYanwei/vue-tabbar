@@ -1,13 +1,25 @@
 <template>
   <div class="tab-bar-item">
-    <slot name="item-icon"></slot>
-    <slot name="item-text"></slot>
+    <div v-if="!isActive">
+      <slot name="item-icon"></slot>
+    </div>
+    <div v-else>
+      <slot name="item-icon-active"></slot>
+    </div>
+    <div :class="{active:isActive}">
+      <slot name="item-text"></slot>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "TabBarItem"
+    name: "TabBarItem",
+    data() {
+      return {
+        isActive: true
+      }
+    }
   }
 </script>
 
@@ -22,5 +34,10 @@
   .tab-bar-item img {
     width: 24px;
     height: 24px;
+  }
+
+  /*设置文字颜色*/
+  .active {
+    color: orangered;
   }
 </style>
