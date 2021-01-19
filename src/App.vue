@@ -1,38 +1,39 @@
 <template>
   <div id="app">
-    <div id="tab-bar">
-      <div class="tab-bar-item">首页</div>
-      <div class="tab-bar-item">分类</div>
-      <div class="tab-bar-item">购物车</div>
-      <div class="tab-bar-item">我的</div>
-    </div>
+    <tab-bar>
+      <tab-bar-item>
+        <img slot="item-icon" src="./assets/img/tabbar/home.png">
+        <div slot="item-text">首页</div>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img slot="item-icon" src="./assets/img/tabbar/category.png">
+        <div slot="item-text">分类</div>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img slot="item-icon" src="./assets/img/tabbar/shop.png">
+        <div slot="item-text">购物车</div>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img slot="item-icon" src="./assets/img/tabbar/profile.png">
+        <div slot="item-text">我的</div>
+      </tab-bar-item>
+    </tab-bar>
   </div>
 </template>
 
 <script>
+  import TabBar from "./components/tabbar/TabBar";
+  import TabBarItem from "./components/tabbar/TabBarItem";
+
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      TabBar,
+      TabBarItem
+    }
   }
 </script>
 
 <style>
   @import "assets/css/base.css";
-
-  #tab-bar {
-    display: flex;
-    background-color: #f6f6f6;
-
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    box-shadow: 0 -2px rgba(100,100,100,0.1);
-  }
-
-  .tab-bar-item {
-    flex: 1;
-    text-align: center;
-    height: 49px;
-  }
 </style>
