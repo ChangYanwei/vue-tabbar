@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-bar-item">
+  <div class="tab-bar-item" @click="itemClick">
     <div v-if="!isActive">
       <slot name="item-icon"></slot>
     </div>
@@ -15,9 +15,17 @@
 <script>
   export default {
     name: "TabBarItem",
+    props: {
+      path: String
+    },
     data() {
       return {
         isActive: true
+      }
+    },
+    methods: {
+      itemClick() {
+        this.$router.push(this.path)
       }
     }
   }
